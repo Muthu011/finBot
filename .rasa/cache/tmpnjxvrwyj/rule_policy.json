@@ -1,0 +1,29 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"age\"], \"intent\": \"provide_details\"}}]": "utter_ask_basic_salary",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"age\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_basic_salary\"}, \"user\": {\"entities\": [\"age\"], \"intent\": \"provide_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"basic_salary\"], \"intent\": \"provide_details\"}}]": "utter_ask_hra",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"basic_salary\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_hra\"}, \"user\": {\"entities\": [\"basic_salary\"], \"intent\": \"provide_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"deductions\"], \"intent\": \"provide_details\"}}]": "utter_ask_investment",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"deductions\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_investment\"}, \"user\": {\"entities\": [\"deductions\"], \"intent\": \"provide_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"investment\"], \"intent\": \"provide_details\"}}]": "utter_ask_city",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"investment\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_city\"}, \"user\": {\"entities\": [\"investment\"], \"intent\": \"provide_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_greet",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}]": "utter_ask_age",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_greet\"}, \"user\": {\"intent\": \"greet\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_age\"}, \"user\": {\"intent\": \"greet\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"hra\"], \"intent\": \"provide_details\"}}]": "utter_ask_other_allowances",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"hra\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_other_allowances\"}, \"user\": {\"entities\": [\"hra\"], \"intent\": \"provide_details\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"other_allowances\"], \"intent\": \"provide_details\"}}]": "utter_ask_deductions",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"entities\": [\"other_allowances\"], \"intent\": \"provide_details\"}}, {\"prev_action\": {\"action_name\": \"utter_ask_deductions\"}, \"user\": {\"entities\": [\"other_allowances\"], \"intent\": \"provide_details\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [],
+    "rules_for_loop_unhappy_path": {},
+    "rules_not_in_stories": [
+      "predicting default action with intent session_start",
+      "predicting default action with intent back",
+      "predicting default action with intent restart"
+    ]
+  }
+}

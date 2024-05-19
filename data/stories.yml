@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+  - story: provide_details_story
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_ask_age
+      - intent: provide_age
+        entities:
+          - age: 30
+      - action: utter_ask_basic_salary
+      - intent: provide_basic_salary
+        entities:
+          - basic_salary: 50000
+      - action: utter_ask_hra
+      - intent: provide_hra
+        entities:
+          - hra: 20000
+      - action: utter_ask_other_allowances
+      - intent: provide_other_allowances
+        entities:
+          - other_allowances: 5000
+      - action: utter_ask_deductions
+      - intent: provide_deductions
+        entities:
+          - deductions: 10000
+      - action: utter_ask_investment
+      - intent: provide_investment
+        entities:
+          - investment: 150000
+      - action: utter_ask_city
+      - intent: provide_city
+        entities:
+          - city: Mumbai
+      - intent: request_salary
+      - action: action_calculate_take_home_salary
+      - action: utter_calculated_salary

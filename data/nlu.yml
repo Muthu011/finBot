@@ -1,0 +1,76 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello
+    - Hi
+    - Hey
+    - Hi there
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - See you later
+    - Bye
+
+- intent: provide_age
+  examples: |
+    - My age is [30](age)
+    - I am [30](age) years old
+    - I am [25](age)
+    - I'm [40](age) years old
+
+- intent: provide_basic_salary
+  examples: |    
+    - My basic salary is [50000](basic_salary)
+    - My basic is [60000](basic_salary)
+    - I earn [70000](basic_salary) as basic salary
+
+- intent: provide_hra
+  examples: |  
+    - I receive [20000](hra) as HRA
+    - My HRA is [15000](hra)
+    - I get [18000](hra) as HRA
+
+- intent: provide_other_allowances
+  examples: |  
+    - Other allowances include [5000](other_allowances)
+    - I have other allowances of [8000](other_allowances)
+    - Other allowances are [10000](other_allowances)
+
+- intent: provide_deductions
+  examples: |  
+    - I have [10000](deductions) in deductions
+    - My deductions are [12000](deductions)
+    - I have [5000](deductions) in deductions
+
+- intent: provide_investment
+  examples: |  
+    - I invested [150000](investment) in tax saving schemes
+    - My investments in tax saving schemes amount to [200000](investment)
+    - I put [100000](investment) in tax savings
+
+- intent: provide_city
+  examples: |  
+    - I live in [Mumbai](city)
+    - My city is [Bangalore](city)
+    - I reside in [Delhi](city)
+    - I live in [Chennai](city)
+
+- intent: provide_all
+  examples: |  
+    - I am [35](age) and my basic salary is [60000](basic_salary)
+    - I am 28 years old, get 10000 as HRA, and have 3000 in other allowances
+    - I have a basic salary of 55000, HRA of 20000, and other allowances of 7000
+    - My age is 32, basic salary is 45000, HRA is 15000, other allowances are 8000, deductions are 5000, investments are 100000, and I live in Pune
+    - Age 29, basic salary 50000, HRA 18000, other allowances 9000, deductions 7000, investment 120000, city Hyderabad
+
+- intent: request_salary
+  examples: |
+    - Can you calculate my take-home salary?
+    - What will be my take-home pay?
+    - How much will I take home after tax?
+    - Calculate my take-home salary
+    - Help me with my take-home salary calculation
+    - I need to know my net salary after tax

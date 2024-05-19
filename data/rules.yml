@@ -1,0 +1,59 @@
+version: "3.1"
+
+rules:
+
+  - rule: Ask for age
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - action: utter_ask_age
+
+  - rule: Ask for basic salary
+    steps:
+      - intent: provide_age
+        entities:
+          - age
+      - action: utter_ask_basic_salary
+
+  - rule: Ask for HRA
+    steps:
+      - intent: provide_basic_salary
+        entities:
+          - basic_salary
+      - action: utter_ask_hra
+
+  - rule: Ask for other allowances
+    steps:
+      - intent: provide_hra
+        entities:
+          - hra
+      - action: utter_ask_other_allowances
+
+  - rule: Ask for deductions
+    steps:
+      - intent: provide_other_allowances
+        entities:
+          - other_allowances
+      - action: utter_ask_deductions
+
+  - rule: Ask for investment
+    steps:
+      - intent: provide_deductions
+        entities:
+          - deductions
+      - action: utter_ask_investment
+
+  - rule: Ask for city
+    steps:
+      - intent: provide_investment
+        entities:
+          - investment
+      - action: utter_ask_city
+
+  # - rule: Calculate take-home salary
+  #   steps:
+  #     - intent: provide_city
+  #       entities:
+  #         - city
+  #     - action: action_calculate_take_home_salary
+  #     - action: utter_calculated_salary

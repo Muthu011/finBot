@@ -1,0 +1,100 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - provide_age
+  - provide_basic_salary
+  - provide_hra
+  - provide_other_allowances
+  - provide_deductions
+  - provide_investment
+  - provide_city
+  - request_salary
+
+entities:
+  - age
+  - basic_salary
+  - hra
+  - other_allowances
+  - deductions
+  - investment
+  - city
+
+slots:
+  age:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: age
+
+  basic_salary:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: basic_salary
+
+  hra:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: hra
+
+  other_allowances:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: other_allowances
+
+  deductions:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: deductions
+
+  investment:
+    type: float
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: investment
+
+  city:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: city
+   
+
+responses:
+  utter_greet:
+    - text: "Hello! I can help you calculate your take-home salary. Can you provide some details?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+  utter_ask_age:
+    - text: "What is your age?"
+  utter_ask_basic_salary:
+    - text: "What is your basic salary?"
+  utter_ask_hra:
+    - text: "How much HRA do you receive?"
+  utter_ask_other_allowances:
+    - text: "Please specify any other allowances you receive."
+  utter_ask_deductions:
+    - text: "Do you have any deductions? Please specify the amount."
+  utter_ask_investment:
+    - text: "How much have you invested in tax-saving schemes?"
+  utter_ask_city:
+    - text: "Which city do you live in?"
+  utter_calculated_salary:
+    - text: "Based on the details provided, your take-home salary is {take_home_salary}."
+
+actions:
+  - action_calculate_take_home_salary
